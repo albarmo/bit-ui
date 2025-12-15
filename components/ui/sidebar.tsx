@@ -57,4 +57,18 @@ const SidebarFooter = React.forwardRef<
 })
 SidebarFooter.displayName = "SidebarFooter"
 
-export { Sidebar, SidebarHeader, SidebarContent, SidebarFooter }
+const SidebarItem = React.forwardRef<
+  HTMLAnchorElement,
+  React.AnchorHTMLAttributes<HTMLAnchorElement>
+>(({ className, ...props }, ref) => {
+  return (
+    <a
+      ref={ref}
+      className={cn("flex w-full items-center rounded-md px-2 py-1.5 text-sm font-medium hover:bg-accent hover:text-accent-foreground", className)}
+      {...props}
+    />
+  )
+})
+SidebarItem.displayName = "SidebarItem"
+
+export { Sidebar, SidebarHeader, SidebarContent, SidebarFooter, SidebarItem }
