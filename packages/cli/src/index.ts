@@ -1,4 +1,4 @@
-#!/usr/bin/env -S npx tsx
+#!/usr/bin/env node
 import { Command } from "commander";
 import fs from "fs-extra";
 import path from "path";
@@ -6,7 +6,7 @@ import fetch from "node-fetch";
 import chalk from "chalk";
 
 const program = new Command();
-const REGISTRY_URL = "http://localhost:8080";
+const REGISTRY_URL = "https://biteam.vercel.app";
 
 program
   .name("my-ui")

@@ -1,15 +1,18 @@
 {
-  "name": "biteam-cli",
+  "name": "@albarmox/ui",
   "version": "1.0.0",
   "description": "CLI untuk library UI saya",
   "type": "module",
   "main": "src/index.ts",
   "bin": {
-    "my-ui": "./src/index.ts"
+    "my-ui": "./dist/index.js"
   },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "tsx src/index.ts",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsup src/index.ts --format esm --minify"
   },
   "dependencies": {
     "chalk": "^5.3.0",
@@ -23,6 +26,7 @@
     "@types/node": "^20.11.0",
     "@types/node-fetch": "^2.6.11",
     "@types/prompts": "^2.4.9",
+    "tsup": "^8.5.1",
     "tsx": "^4.7.0",
     "typescript": "^5.3.3"
   }
