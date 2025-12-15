@@ -1,0 +1,11 @@
+{
+  "name": "sidebar",
+  "dependencies": [],
+  "files": [
+    {
+      "name": "sidebar.tsx",
+      "content": "import * as React from \"react\"\nimport { cn } from \"@/lib/utils\"\n\nconst Sidebar = React.forwardRef<\n  HTMLDivElement,\n  React.HTMLAttributes<HTMLDivElement>\n>(({ className, ...props }, ref) => {\n  return (\n    <div\n      ref={ref}\n      className={cn(\"h-full border-r bg-muted/40 p-4\", className)}\n      {...props}\n    />\n  )\n})\nSidebar.displayName = \"Sidebar\"\n\nconst SidebarHeader = React.forwardRef<\n  HTMLDivElement,\n  React.HTMLAttributes<HTMLDivElement>\n>(({ className, ...props }, ref) => {\n  return (\n    <div\n      ref={ref}\n      className={cn(\"flex h-14 items-center border-b px-6\", className)}\n      {...props}\n    />\n  )\n})\nSidebarHeader.displayName = \"SidebarHeader\"\n\nconst SidebarContent = React.forwardRef<\n  HTMLDivElement,\n  React.HTMLAttributes<HTMLDivElement>\n>(({ className, ...props }, ref) => {\n  return (\n    <div\n      ref={ref}\n      className={cn(\"flex-1 overflow-auto py-2\", className)}\n      {...props}\n    />\n  )\n})\nSidebarContent.displayName = \"SidebarContent\"\n\nconst SidebarFooter = React.forwardRef<\n  HTMLDivElement,\n  React.HTMLAttributes<HTMLDivElement>\n>(({ className, ...props }, ref) => {\n  return (\n    <div\n      ref={ref}\n      className={cn(\"mt-auto border-t p-4\", className)}\n      {...props}\n    />\n  )\n})\nSidebarFooter.displayName = \"SidebarFooter\"\n\nexport { Sidebar, SidebarHeader, SidebarContent, SidebarFooter }\n"
+    }
+  ],
+  "type": "components:ui"
+}

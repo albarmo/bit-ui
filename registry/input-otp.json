@@ -1,0 +1,11 @@
+{
+  "name": "input-otp",
+  "dependencies": [],
+  "files": [
+    {
+      "name": "input-otp.tsx",
+      "content": "import * as React from \"react\";\n\nconst InputOtp = React.forwardRef<\n  HTMLDivElement,\n  React.HTMLAttributes<HTMLDivElement>\n>(({ className, ...props }, ref) => {\n  return (\n    <div ref={ref} className={className} {...props}>\n      InputOtp Content\n    </div>\n  );\n});\nInputOtp.displayName = \"InputOtp\";\n\nexport { InputOtp };\n"
+    }
+  ],
+  "type": "components:ui"
+}

@@ -1,0 +1,11 @@
+{
+  "name": "button-group",
+  "dependencies": [],
+  "files": [
+    {
+      "name": "button-group.tsx",
+      "content": "import * as React from \"react\"\nimport { cva, type VariantProps } from \"class-variance-authority\"\n\nimport { cn } from \"@/lib/utils\"\n\nconst buttonGroupVariants = cva(\"flex items-center\", {\n  variants: {\n    orientation: {\n      horizontal: \"space-x-2\",\n      vertical: \"flex-col space-y-2\",\n    },\n  },\n  defaultVariants: {\n    orientation: \"horizontal\",\n  },\n})\n\nexport interface ButtonGroupProps\n  extends React.HTMLAttributes<HTMLDivElement>,\n    VariantProps<typeof buttonGroupVariants> {}\n\nconst ButtonGroup = React.forwardRef<HTMLDivElement, ButtonGroupProps>(\n  ({ className, orientation, ...props }, ref) => {\n    return (\n      <div\n        ref={ref}\n        className={cn(buttonGroupVariants({ orientation }), className)}\n        {...props}\n      />\n    )\n  }\n)\nButtonGroup.displayName = \"ButtonGroup\"\n\nexport { ButtonGroup, buttonGroupVariants }\n"
+    }
+  ],
+  "type": "components:ui"
+}

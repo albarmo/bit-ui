@@ -1,0 +1,11 @@
+{
+  "name": "native-select",
+  "dependencies": [],
+  "files": [
+    {
+      "name": "native-select.tsx",
+      "content": "import * as React from \"react\"\nimport { cn } from \"@/lib/utils\"\n\nconst NativeSelect = React.forwardRef<\n  HTMLSelectElement,\n  React.SelectHTMLAttributes<HTMLSelectElement>\n>(({ className, ...props }, ref) => {\n  return (\n    <select\n      ref={ref}\n      className={cn(\n        \"h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50\",\n        className\n      )}\n      {...props}\n    />\n  )\n})\nNativeSelect.displayName = \"NativeSelect\"\n\nexport { NativeSelect }\n"
+    }
+  ],
+  "type": "components:ui"
+}

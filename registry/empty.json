@@ -1,0 +1,11 @@
+{
+  "name": "empty",
+  "dependencies": [],
+  "files": [
+    {
+      "name": "empty.tsx",
+      "content": "import * as React from \"react\"\nimport { cn } from \"@/lib/utils\"\n\nconst Empty = React.forwardRef<\n  HTMLDivElement,\n  React.HTMLAttributes<HTMLDivElement>\n>(({ className, ...props }, ref) => {\n  return (\n    <div\n      ref={ref}\n      className={cn(\n        \"flex flex-col items-center justify-center space-y-4\",\n        className\n      )}\n      {...props}\n    />\n  )\n})\nEmpty.displayName = \"Empty\"\n\nconst EmptyIcon = React.forwardRef<\n  HTMLDivElement,\n  React.HTMLAttributes<HTMLDivElement>\n>(({ className, ...props }, ref) => {\n  return (\n    <div\n      ref={ref}\n      className={cn(\"text-muted-foreground\", className)}\n      {...props}\n    />\n  )\n})\nEmptyIcon.displayName = \"EmptyIcon\"\n\nconst EmptyTitle = React.forwardRef<\n  HTMLHeadingElement,\n  React.HTMLAttributes<HTMLHeadingElement>\n>(({ className, ...props }, ref) => {\n  return (\n    <h3\n      ref={ref}\n      className={cn(\"text-lg font-semibold\", className)}\n      {...props}\n    />\n  )\n})\nEmptyTitle.displayName = \"EmptyTitle\"\n\nconst EmptyDescription = React.forwardRef<\n  HTMLParagraphElement,\n  React.HTMLAttributes<HTMLParagraphElement>\n>(({ className, ...props }, ref) => {\n  return (\n    <p\n      ref={ref}\n      className={cn(\"text-sm text-muted-foreground\", className)}\n      {...props}\n    />\n  )\n})\nEmptyDescription.displayName = \"EmptyDescription\"\n\nexport { Empty, EmptyIcon, EmptyTitle, EmptyDescription }\n"
+    }
+  ],
+  "type": "components:ui"
+}
