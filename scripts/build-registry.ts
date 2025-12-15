@@ -1,12 +1,9 @@
 import fs from "fs-extra";
 import path from "path";
 
-// 1. Konfigurasi Lokasi
 const SOURCE_DIR = path.join(process.cwd(), "components/ui");
 const OUTPUT_DIR = path.join(process.cwd(), "registry");
 
-// 2. Mapping Dependensi (Manual Config)
-// Di sini Anda mendefinisikan library apa saja yang dibutuhkan tiap komponen
 const COMPONENT_DEPENDENCIES: Record<string, string[]> = {
   "button": ["@radix-ui/react-slot", "class-variance-authority"],
   "alert-dialog": ["@radix-ui/react-alert-dialog"],
@@ -42,7 +39,6 @@ const COMPONENT_DEPENDENCIES: Record<string, string[]> = {
 async function buildRegistry() {
   console.log("🚀 Memulai build registry...");
 
-  // Pastikan folder output bersih
   if (fs.existsSync(OUTPUT_DIR)) {
     fs.removeSync(OUTPUT_DIR);
   }
