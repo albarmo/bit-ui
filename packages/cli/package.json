@@ -1,6 +1,6 @@
 {
   "name": "@albarmox/ui",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "CLI untuk library UI saya",
   "type": "module",
   "main": "src/index.ts",

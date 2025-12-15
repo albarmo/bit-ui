@@ -9,7 +9,6 @@ function GridBackground() {
   );
 }
 
-// Komponen Terminal Mockup yang lebih cantik
 function CodeWindow() {
   return (
     <div className="relative rounded-xl bg-[#0a0a0a] border border-white/10 shadow-2xl overflow-hidden w-full max-w-lg mx-auto transform transition-all hover:scale-[1.01]">

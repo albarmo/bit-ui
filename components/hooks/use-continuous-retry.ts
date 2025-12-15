@@ -43,7 +43,7 @@ const useContinuousRetry = ({
   }
 
   useEffect(() => {
-    return () => stop() // Cleanup on unmount
+    return () => stop()
   }, [])
 
   return { isRetrying, retryCount, start, stop }

@@ -1,33 +1,26 @@
 import Link from "next/link";
 import { 
-  // Icons Foundation & Layout
   Type, MousePointer2, Layout, AppWindow, CreditCard, 
   Loader2, Maximize, Scroll, Minus, PanelLeft, 
   Square, GripVertical, Ghost,
   
-  // Icons Forms
   CheckSquare, ToggleLeft, MoreHorizontal, SquarePen, 
   Calendar, ChevronsUpDown, Keyboard, MousePointerClick,
   ListFilter, FormInput, AlignJustify, CircleDot,
   ArrowDownSquare, SlidersHorizontal, TextCursorInput,
   
-  // Icons Navigation
   Menu, ChevronRight, Compass, GalleryHorizontal, 
   PanelTop, SplitSquareHorizontal, Layers,
   
-  // Icons Feedback & Overlay
   BellRing, MessageSquare, AlertTriangle, AlertOctagon,
   PanelBottom, Sidebar as SidebarIcon, Sticker,
   
-  // Icons Data Display
   Table2, BarChart3, User, Search, ChevronDown,
   Tag, Command as CommandIcon, List, FileSpreadsheet,
   
-  // Utils
   Search as SearchIcon, ArrowRight, Sparkles, FolderOpen
 } from "lucide-react";
 
-// --- Types ---
 interface ComponentItem {
   title: string;
   description: string;
@@ -41,7 +34,6 @@ interface CategorySection {
   items: ComponentItem[];
 }
 
-// --- DATA KOMPONEN LENGKAP ---
 const componentsData: CategorySection[] = [
   {
     title: "Foundation",
@@ -423,8 +415,6 @@ const componentsData: CategorySection[] = [
     ],
   },
 ];
-
-// --- Sub-Components ---
 
 function DotPattern() {
   return (

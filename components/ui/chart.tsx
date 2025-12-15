@@ -148,7 +148,6 @@ export {
   ChartTooltipContent,
   ChartLegend,
   ChartLegendContent,
-  // Recharts
   Area,
   AreaChart,
   Bar,

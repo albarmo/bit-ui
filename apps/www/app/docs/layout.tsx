@@ -1,6 +1,5 @@
 import Link from "next/link";
 
-// Konfigurasi Menu Sidebar
 const docsConfig = [
   {
     title: "Getting Started",

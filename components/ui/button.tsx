@@ -40,8 +40,6 @@ export interface ButtonProps
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant, size, asChild = false, ...props }, ref) => {
-    // Jika asChild=true, gunakan Slot (berguna untuk membungkus Link/a tag)
-    // Jika false, gunakan tag "button" biasa
     const Comp = asChild ? Slot : "button"
     return (
       <Comp

@@ -1,5 +1,5 @@
 import type { Config } from "tailwindcss";
-import typography from "@tailwindcss/typography"; // <--- Import plugin di sini
+import typography from "@tailwindcss/typography";
 
 const config: Config = {
   content: [
